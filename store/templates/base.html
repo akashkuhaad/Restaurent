@@ -1,0 +1,635 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <title>Task</title>
+
+  <style>
+    nav{
+      background-color: white;
+    }
+    .one-edge-shadow {
+              box-shadow: 0 8px 2px -5px rgb(246, 245, 245);
+}
+.display-8{
+  font-weight: 200;
+  font-size: 30px;
+}
+   body
+         {
+          margin: 0px;
+          }
+          .bodydiv
+          {
+           background-image: url('http://alphawd.c1.biz/flavour/images/hero-bg.jpg');
+          height: 100%;
+          width:100%;
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-color: rgba(0,0,0,0.3);
+          }
+
+        .menubar
+        {
+          display: inline-block;
+          width: 100%;
+        }
+        .logo
+        {
+          display: inline-block;
+          width: 13%;
+          padding-left: 9%;
+          font-weight: 800;
+          font-size: 27px;
+          font-family: cursive;
+          color: white;
+        }
+        .menus
+        {
+          display: inline-block;
+          width: 45%;
+        }
+        .navitems
+        {
+          list-style-type: none;
+          font-family: cursive;
+        }
+        li.listitems
+        {
+          float: left;
+          margin-left: 7%;
+        }
+         li.listitems:hover
+        {
+          float: left;
+          margin-left: 7%;
+        }
+          a.menulink
+        {
+          padding: 6px;
+          font-size: 16px;
+
+          color:white;
+        }
+          a.menulink:hover
+        {
+          background-color: red;
+          border-radius: 11px;
+          padding: 6px;
+          font-size: 16px;
+
+          color:white;
+        }
+          a.menulink:active
+        {
+          background-color: red;
+          border-radius: 11px;
+          padding: 6px;
+        }
+          .social_list
+         {
+          list-style-type: none;
+         }
+          .social_media
+          {
+           float: left;
+           margin-left: 34px;
+          }
+            .social-header
+            {
+                 display: inline-block;
+            }
+             .fa:hover
+          {
+             background-color: #337ab7;
+             padding: 3px;
+             border-radius: 11px;
+           }
+
+            .fa
+          {
+             padding: 3px;
+             border-radius: 11px;
+           }
+           .welcomecontainer
+           {
+            padding-top: 12%;
+            text-align: center;
+            }
+            .welcometext
+            {
+                color: #cdba6d;
+                font-family: 'Great Vibes', cursive !important;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 54px;
+             }
+             .border-mine {
+    border: 2px solid #cdba6d;
+    }
+.welcometext1
+            {
+                color: #cdba6d;
+                font-family: 'Great Vibes', cursive !important;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 30px;
+             }
+             .name
+              {
+                font-family: 'Montserrat', sans-serif;
+                color: #fff;
+                font-size: xxx-large;
+               }
+               .timingfirst {
+                    color: white;
+                }
+                .timingsecond {
+                    color: white;
+                }
+                    .reservationbuttton
+                {
+                    padding: 13px;
+                }
+                #btnreservation
+                {
+                 background-color: #ce283b !important;
+                 border-radius: 23px;
+                 }
+                        .imagewithtext
+                        {
+    display: inline-block;
+    width: 100%;
+    padding-left: 9%;
+    background-color: white;
+    padding-top:100px;
+    margin-bottom: 22px;
+}
+.diningimage {
+    display: inline-grid;
+        vertical-align: top;
+
+}
+.singleimage {
+    display: inline-block;
+    padding-left: 2%;
+    vertical-align: top;
+
+}
+img.dine {
+    width: 222px;
+}
+img.singledine {
+    width: 208px;
+}
+#secondshortimg
+{
+margin-top: 23px;
+    height: 141px;
+    }
+
+   #firstshortimg
+   {
+    height: 141px;
+   }
+   .textonly
+   {
+    display: inline-block;
+    width: 54%;
+    padding-left: 4%;
+   }
+   .successstory
+   {
+    font-weight: 600;
+    font-family: 'Merriweather', serif;
+    padding-left: 10px;
+}
+.discover
+{
+    font-family: cursive;
+    letter-spacing: 1px;
+    color: #cdba6d;
+    font-size: 24px;
+    padding-left: 8px;
+}
+
+
+
+
+
+
+
+.offers
+{
+    display: inline-block;
+    width: 100%;
+    background-image: url(http://alphawd.c1.biz/flavour/images/offers-bg.jpg);
+}
+.offerheading
+{
+    width: 100%;
+    text-align: center;
+    padding-top: 15px;
+}
+.offerimgcontainer
+{
+    display: inline-block;
+    width: 100%;
+}
+
+.offerimg
+ {
+    display: inline-block;
+    width: 35%;
+    padding-left: 8%;
+    text-align: center;
+}
+.offerimg2
+{
+    display: inline-block;
+    width: 30%;
+    padding-left: 1%;
+    text-align: center;
+}
+.offerimg3
+{
+    display: inline-block;
+    width: 29%;
+    text-align: center;
+}
+.first
+{
+    color: #dcdcdc;
+    font-family: cursive;
+}
+.underimgtext
+{
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 12px;
+    margin-bottom: 2px;
+}
+.undertext
+{
+     color: #dcdcdc;
+     font-size: 12px;
+}
+.underimgtext2 {
+ font-family: 'Montserrat', sans-serif;
+    color: white;
+    margin-top: 12px;
+    margin-bottom: 2px;
+}
+.undertext2
+{
+    color: #dcdcdc;
+    font-size: 12px;
+}
+.underimgtext3
+{
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    margin-top: 12px;
+    margin-bottom: 2px;
+}
+.undertext3 {
+    color: #dcdcdc;
+    font-size: 12px;
+}
+
+
+<!-- Footer CSS -->
+footer.footer-distributed{
+   background: ;
+   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+   box-sizing: border-box;
+   width: 100%;
+   font: bold 16px sans-serif;
+   text-align: left;
+   padding: 50px 60px 40px;
+   overflow: hidden;
+}
+
+section {
+  width: 100%;
+  display: inline-block;
+  background: #ccc;
+  height: 60vh;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+   float: left;
+}
+
+/* The company logo */
+
+.footer-distributed h3{
+   color:  #ffffff;
+   font: normal 36px 'Roboto', cursive;
+   margin: 0 0 10px;
+}
+
+.footer-distributed h3 span{
+   color:  #5383d3;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+   color:  #ffffff;
+   margin: 0 0 10px;
+   padding: 0;
+}
+
+.footer-distributed .footer-links a{
+   display:inline-block;
+   line-height: 1.8;
+   text-decoration: none;
+   color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+   color:  #8f9296;
+   font-size: 14px;
+   font-weight: normal;
+   margin: 0;
+}
+
+/* Footer social icons */
+
+.footer-distributed .footer-icons{
+   margin-top: 40px;
+}
+
+.footer-distributed .footer-icons a{
+   display: inline-block;
+   width: 35px;
+   height: 35px;
+   cursor: pointer;
+   background-color:  #33383b;
+   border-radius: 2px;
+
+   font-size: 20px;
+   color: #ffffff;
+   text-align: center;
+   line-height: 35px;
+
+   margin-right: 3px;
+   margin-bottom: 5px;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+   float: right;
+}
+
+.footer-distributed .footer-right p{
+   display: inline-block;
+   vertical-align: top;
+   margin: 15px 42px 0 0;
+   color: #ffffff;
+}
+
+/* The contact form */
+
+.footer-distributed form{
+   display: inline-block;
+}
+
+.footer-distributed form input,
+.footer-distributed form textarea{
+   display: block;
+   border-radius: 3px;
+   box-sizing: border-box;
+   background-color:  #1f2022;
+   box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1);
+   border: none;
+   resize: none;
+
+   font: inherit;
+   font-size: 14px;
+   font-weight: normal;
+   color:  #d1d2d2;
+
+   width: 400px;
+   padding: 18px;
+}
+
+.footer-distributed ::-webkit-input-placeholder {
+   color:  #5c666b;
+}
+
+.footer-distributed ::-moz-placeholder {
+   color:  #5c666b;
+   opacity: 1;
+}
+
+.footer-distributed :-ms-input-placeholder{
+   color:  #5c666b;
+}
+
+
+.footer-distributed form input{
+   height: 55px;
+   margin-bottom: 15px;
+}
+
+.footer-distributed form textarea{
+   height: 100px;
+   margin-bottom: 20px;
+}
+
+.footer-distributed form button{
+   border-radius: 3px;
+   background-color:  #33383b;
+   color: #ffffff;
+   border: 0;
+   padding: 15px 50px;
+   font-weight: bold;
+   float: right;
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 1000px) {
+
+   .footer-distributed {
+      font: bold 14px sans-serif;
+   }
+
+   .footer-distributed .footer-company-name{
+      font-size: 12px;
+   }
+
+   .footer-distributed form input,
+   .footer-distributed form textarea{
+      width: 250px;
+   }
+
+   .footer-distributed form button{
+      padding: 10px 35px;
+   }
+
+}
+
+@media (max-width: 800px) {
+
+   .footer-distributed{
+      padding: 30px;
+   }
+
+   .footer-distributed .footer-left,
+   .footer-distributed .footer-right{
+      float: none;
+      max-width: 300px;
+      margin: 0 auto;
+   }
+
+   .footer-distributed .footer-left{
+      margin-bottom: 40px;
+   }
+
+   .footer-distributed form{
+      margin-top: 30px;
+   }
+
+   .footer-distributed form{
+      display: block;
+   }
+
+   .footer-distributed form button{
+      float: none;
+   }
+}
+
+
+
+.facebook
+ {
+  color: blue;
+}
+
+.twitter
+ {
+  color: aquamarine;
+  margin-left: 16px;
+}
+
+.google
+ {
+  color: red;
+  margin-left: 16px;
+}
+.footercontainer
+{
+    text-align: center;
+    background-color: #262626;;
+    color: white;
+    height: 150px;
+    padding-top: 30px;
+    margin: 0px;
+    }
+
+    #sticky {
+  position: sticky;
+  position: -webkit-sticky;
+  background: #f83d23;
+  top: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 6px #000;
+  color: #fff;
+}
+
+  </style>
+</head>
+
+<body>
+
+  <!-- navbar -->
+
+  <nav class="one-edge-shadow 
+  sticky-top navbar 
+  navbar-expand-lg
+   navbar-light bg-white">
+    <a class="welcometext1" href="/">Flavour</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+<!--          <a class="nav-link" href="/store">Store <span class="sr-only">(current)</span></a>-->
+        </li>
+
+      </ul>
+
+
+      <ul class=" navbar-nav my-2 my-lg-0">
+        <li class="nav-item ">
+          <a class="nav-link" href="/cart">Cart 
+            <span class="badge badge-info">{{request.session.cart.keys|length}}</span>
+            <span class="sr-only">(current)</span></a>
+        </li>
+        {% if request.session.customer %}
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="/orders">Orders<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link" href="/logout">Logout<span class="sr-only">(current)</span></a>
+        </li>
+        {% else %}
+       
+        <li class="nav-item ">
+          <a class="nav-link" href="/signup">Signup<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link" href="/login">Login<span class="sr-only">(current)</span></a>
+        </li>
+        {% endif %}
+
+
+
+      </ul>
+
+
+    </div>
+  </nav>
+
+
+    {% block content %}{% endblock %}
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

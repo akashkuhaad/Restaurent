@@ -1,0 +1,216 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% load cart %}
+{% load custom_filter %}
+<!-- body -->
+   <div class="bodydiv">
+     <div class="menubar">
+<!--         <div class="logo">-->
+<!--             Flavour-->
+<!--         </div>-->
+         <div class="menus">
+<!--             <ul class="navitems">-->
+<!--                 <li class="listitems">-->
+<!--                     <a style="color: white;" class="menulink">-->
+<!--                         Home-->
+<!--                     </a>-->
+<!--                 </li>-->
+<!--                 <li class="listitems">-->
+<!--                     <a style="color: white;" class="menulink">-->
+<!--                     About Us-->
+<!--                     </a>-->
+<!--                 </li>-->
+<!--                 <li class="listitems">-->
+<!--                     <a style="color: white;" class="menulink">-->
+<!--                     Offers-->
+<!--                     </a>-->
+<!--                 </li>-->
+<!--                 <li class="listitems">-->
+<!--                     <a href="/index" style="color: white;" class="menulink">-->
+<!--                     Menus-->
+<!--                     </a>-->
+<!--                 </li>-->
+<!--                 <li style="color: white;" class="listitems">-->
+<!--                     <a class="menulink">-->
+<!--                     Reservation-->
+<!--                     </a>-->
+<!--                 </li>-->
+<!--             </ul>-->
+
+         </div>
+          <div class="social-header">
+                     <ul class="social_list">
+                        <li class="social_media">
+                                        <a href="#" class="fa fa-facebook" style="color: white; text-decoration: none;"></a>
+                        </li>
+                        <li class="social_media">
+                           <a href="#" class="fa fa-twitter" style="color: white; text-decoration: none;" target="_blank"></a>
+                        </li>
+                        <li class="social_media">
+                           <a href="#" class="fa fa-linkedin" style="color: white; text-decoration: none;" target="_blank"></a>
+                        </li>
+                     </ul>
+          </div>
+     </div>
+     <div class="welcomecontainer">
+         <div class="welcomefont">
+             <h1 class="welcometext">WELCOME To</h1>
+         </div>
+         <div class="restaurentname">
+             <h1 class="name">FLAVOUR</h1>
+         </div>
+         <div class="diningicon">
+             <img class="spacer" src="http://alphawd.c1.biz/flavour/images/spacer-big.png" alt="">
+         </div>
+         <div class="workinghours">
+             <p class="timingfirst">MON-FRI: 08:00 AM - 11:00 PM</p>
+             <p class="timingsecond">WEEKENDS: 09:00 AM - 12:00 PM</p>
+         </div>
+         <div class="reservationbuttton">
+         <a class="btn btn-red" id="btnreservation" href="#reservation">Make a reservation</a>
+         </div>
+
+	 </div></div>
+<div class="container-fluid mt-3">
+	<div class="row">
+
+
+		<!-- filter -->
+
+		<div class="col-lg-3 mx-auto">
+			<div class="list-group" id="sticky">
+
+				<a href="/" class="list-group-item list-group-item-action">All Products</a>
+
+				{% for category in categories %}
+				<a href="/?category={{category.id}}"
+					class="list-group-item list-group-item-action">{{category.name}}</a>
+				{% endfor %}
+			</div>
+		</div>
+
+		<!-- all products -->
+		<div id='products' class="col-lg-9 mx-auto">
+			<div class="row mx-auto">
+				{% for product in products %}
+				<div class="card mx-auto mb-3" id={{product.id}} style="width: 18rem;">
+					<img class="card-img-top" src="{{product.image.url}}" alt="Card image cap">
+					<div class="card-body">
+						<p class="card-title"><b id="pro-colo">{{product.name}}</b></p>
+						<p class="card-text"><b>{{product.price|currency}}</b></p>
+						<!-- {{product | is_in_cart:request.session.cart }} -->
+					</div>
+
+					<div class="card-footer p-0 no-gutters">
+
+						{% if product|is_in_cart:request.session.cart %}
+						<div class="row no-gutters">
+							<form action="/#{{product.id}}" class="col-2 " method="post">
+								{% csrf_token %}
+								<input hidden type="text" name='product' value='{{product.id}}'>
+								<input hidden type="text" name='remove' value='True'>
+								<input type="submit" value=" - " class="btn btn-block btn-light border-right">
+							</form>
+							<div class="text-center col">{{product|cart_quantity:request.session.cart}} in Cart</div>
+							<form action="/#{{product.id}}" class="col-2 " method="post">
+								{% csrf_token %}
+								<input hidden type="text" name='product' value='{{product.id}}'>
+								<input type="submit" value=" + " class="btn btn-block btn-light border-left">
+							</form>
+						</div>
+						{% else %}
+						<form action="/#{{product.id}}" method="POST" class="btn-block">
+							{% csrf_token %}
+							<input hidden type="text" name='product' value='{{product.id}}'>
+							<input type="submit" class="float-right btn btn-light  form-control"
+								value="Add To Cart">
+						</form>
+						{% endif %}
+
+					</div>
+
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="imagewithtext">
+               <div class="diningimage">
+                   <img class="dine" id="firstshortimg"src="http://alphawd.c1.biz/flavour/images/about-img1.jpg" alt="">
+                   <img class="dine" id="secondshortimg" src="http://alphawd.c1.biz/flavour/images/about-img2.jpg" alt="">
+               </div>
+               <div class="singleimage">
+                   <img class="singledine" src="http://alphawd.c1.biz/flavour/images/about-img3.jpg" alt="">
+               </div>
+               <div class="textonly">
+                   <h4 class="discover">Discover our</h4>
+                   <h2 class="successstory">Success Story</h2>
+                   <p class="paragraphstory">
+
+                            Lorem ipsum carrots, when he flies learned. Lorem deleniti of Menander in unto her, conceived with difficulty deleniti do not approve of. To bring it to teach citizens, hardly liable to assueverit. Is it the Greek words, we have not. Or when they were easier accusation.
+                            Clita aliquip on me by disputing it. For those suffering from the attacks. Now these things being the opinion of cu.
+
+                            Which is the midpoint of, and who is, or employee to be expanded on the hardships of which they are. And when you explain the dynamic.
+
+                            Is it the Greek words, we have not. Or when they were easier accusation.
+                            Clita aliquip on me by disputing it. For those suffering from the attacks. Now these things being the opinion of cu.
+                   </p>
+               </div>
+     </div>
+
+
+    <div class="offers">
+    <div class="offerheading">
+        <p class="first">
+            Qui quaeque mediocritatem et
+                    </p>
+        <h1 class="second">
+            The offers of the day
+        </h1>
+        <p class="smallimg">
+            <img src="http://alphawd.c1.biz/flavour/images/spacer-white.png" alt="">
+        </p>
+
+    </div>
+    <div class="offerimgcontainer">
+        <div class="offerimg">
+            <img style="width: 350px; height: 285px;" src="http://alphawd.c1.biz/flavour/images/offer-1.jpg" alt="">
+            <p class="underimgtext">
+                Citrus avocado salad
+            </p>
+            <p class="undertext">
+                Vel cu essent invidunt accusamus
+            </p>
+        </div>
+         <div class="offerimg2">
+            <img style="width: 350px; height: 285px;" src="http://alphawd.c1.biz/flavour/images/offer-2.jpg" alt="">
+            <p class="underimgtext2">
+                Greek chicken kabobs
+            </p>
+            <p class="undertext2">
+                Vel cu essent invidunt accusamus
+            </p>
+        </div>
+        <div class="offerimg3">
+            <img style="width: 350px; height: 285px;" src="http://alphawd.c1.biz/flavour/images/offer-3.jpg" alt="">
+            <p class="underimgtext3">
+                Vegan meze layer cake
+            </p>
+            <p class="undertext3">
+                Vel cu essent invidunt accusamus
+            </p>
+        </div>
+
+
+    </div>
+</div>
+
+
+   </div>
+
+
+{% endblock %}
